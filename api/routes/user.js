@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
 });
 router.post("/add", (req, res) => {
   const username = req.body.username;
+
   const newUser = new User({ username });
   newUser
     .save()
@@ -16,4 +17,4 @@ router.post("/add", (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
-module.exports =router
+module.exports = router;
