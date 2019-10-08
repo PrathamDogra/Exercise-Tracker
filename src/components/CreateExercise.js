@@ -47,12 +47,12 @@ class CreateExercise extends Component {
     };
     console.log(exercise);
     axios
-      .post("https://exercise-mern-app.herokuapp.com/exercises/add", exercise)
+      .post("http://localhost:5000/exercises/add", exercise)
       .then(res => console.log(res.data));
     window.location = "/";
   };
   componentDidMount() {
-    axios.get("https://exercise-mern-app.herokuapp.com/users").then(res => {
+    axios.get("http://localhost:5000/users").then(res => {
       if (res.data.length > 0) {
         this.setState({
           users: res.data.map(user => user.username),

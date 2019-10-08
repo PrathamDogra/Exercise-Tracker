@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Exercise from './Exercise';
-
+//http://localhost:5000/
 class ExercisesList extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +12,7 @@ class ExercisesList extends Component {
   }
   deleteExercise = id => {
     axios
-      .delete("https://exercise-mern-app.herokuapp.com/exercises/" + id)
+      .delete("http://localhost:5000/exercises/" + id)
       .then(res => console.log(res.data))
       .catch(err => console.log(err));
     this.setState({
@@ -28,7 +28,7 @@ class ExercisesList extends Component {
   }
   componentDidMount() {
     axios
-      .get("https://exercise-mern-app.herokuapp.com/exercises")
+      .get("http://localhost:5000/exercises")
       .then(res => this.setState({ exercises: res.data }))
       .catch(err => console.log(err));
   }
