@@ -12,7 +12,7 @@ class ExercisesList extends Component {
   }
   deleteExercise = id => {
     axios
-      .delete("http://localhost:5000/exercises/" + id)
+      .delete("https://exercise-mern-app.herokuapp.com/exercises/" + id)
       .then(res => console.log(res.data))
       .catch(err => console.log(err));
     this.setState({
@@ -28,7 +28,7 @@ class ExercisesList extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:5000/exercises")
+      .get("https://exercise-mern-app.herokuapp.com/exercises")
       .then(res => this.setState({ exercises: res.data }))
       .catch(err => console.log(err));
   }

@@ -21,7 +21,7 @@ class CreateUser extends Component {
     };
     console.log(user);
     axios
-      .post("http://localhost:5000/users/add", user)
+      .post("https://exercise-mern-app.herokuapp.com/users/add", user)
       .then(res => console.log(res));
     this.setState({
         username:''
