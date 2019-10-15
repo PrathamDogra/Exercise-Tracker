@@ -95,8 +95,6 @@ export default class EditExercise extends Component {
         exercise
       )
       .then(res => console.log(res.data));
-
-    window.location = "/";
   }
 
   render() {
