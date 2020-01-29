@@ -15,6 +15,7 @@ mongoose
     console.log("The connection to MongoDB is established successfully")
   )
   .catch(err => console.log(err));
+  
 const userRoute = require('./routes/user');
 const exerciseRoute = require('./routes/exercise');
 app.use('/users', userRoute);
